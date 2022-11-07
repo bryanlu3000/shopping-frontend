@@ -4,7 +4,7 @@ import { useAuthContext } from "../context/AuthContext";
 import { useAppSelector } from "../redux/reduxTypedHooks";
 import { getCartItems } from "../redux/ShopSlice";
 import { Circle, useDisclosure } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import ShoppingCart from "./ShoppingCart";
 import SignoutAlert from "./SignoutAlert";
 import "../css/navbar.css";
@@ -44,7 +44,8 @@ export default function Navbar() {
               <a href="/shop/all"> Shop </a>
             </li>
             <li>
-              <a href="/about"> About </a>
+              {/* <a href="/about"> About </a> */}
+              <Link to="/about"> About </Link>
             </li>
             <div className="nav-close-btn">
               <i

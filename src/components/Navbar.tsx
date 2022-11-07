@@ -32,16 +32,19 @@ export default function Navbar() {
         }`}
       >
         <div className="nav-container container flex">
-          <a href="/" className="brand">
+          {/* <a href="/" className="brand"> */}
+          <Link to="/" className="brand">
             Brand
-          </a>
+          </Link>
 
           <ul className={`nav-ul flex ${navToggle && "active"}`}>
             <li>
-              <a href="/"> Event </a>
+              {/* <a href="/"> Event </a> */}
+              <Link to="/"> Event </Link>
             </li>
             <li>
-              <a href="/shop/all"> Shop </a>
+              {/* <a href="/shop/all"> Shop </a> */}
+              <Link to="/shop/all"> Shop </Link>
             </li>
             <li>
               {/* <a href="/about"> About </a> */}

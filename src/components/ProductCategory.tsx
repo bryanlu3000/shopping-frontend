@@ -20,7 +20,6 @@ export default function ProductCategory({
       <img src={imgUrl} alt="" className="product__image" />
       <h3 className="product__title">{productTitle}</h3>
       <p>{productDescription}</p>
-      {/* <a href={categoryUrl} className="btn"> */}
       <Link to={categoryUrl} className="btn">
         Shop now
       </Link>

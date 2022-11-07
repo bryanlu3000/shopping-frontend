@@ -32,22 +32,18 @@ export default function Navbar() {
         }`}
       >
         <div className="nav-container container flex">
-          {/* <a href="/" className="brand"> */}
           <Link to="/" className="brand">
             Brand
           </Link>
 
           <ul className={`nav-ul flex ${navToggle && "active"}`}>
             <li>
-              {/* <a href="/"> Event </a> */}
               <Link to="/"> Event </Link>
             </li>
             <li>
-              {/* <a href="/shop/all"> Shop </a> */}
               <Link to="/shop/all"> Shop </Link>
             </li>
             <li>
-              {/* <a href="/about"> About </a> */}
               <Link to="/about"> About </Link>
             </li>
             <div className="nav-close-btn">

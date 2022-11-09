@@ -65,7 +65,7 @@ export default function ShoppingCart() {
           </Text>
           <Spacer />
           <Button variant="outline" mr={3} size="sm" onClick={onClose}>
-            Cancel
+            Back
           </Button>
           <Button colorScheme="blue" size="sm">
             Checkout

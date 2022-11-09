@@ -90,7 +90,7 @@ export default function Shop() {
   // Use isUrlPageChange to ensure that only the currentPage change from paginator can modify the page query in the url. The currentPage change caused by the browser backward/forward will not modify the url again.
   useEffect(() => {
     if (!isUrlPageChange) {
-      navigate(`?page=${currentPage}`);
+      navigate(`?page=${currentPage}&nameQuery=${nameQuery}`);
       // setSearch((prev) => ({ ...prev, page: currentPage }));
     }
   }, [currentPage]);
@@ -129,7 +129,7 @@ export default function Shop() {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                navigate(`/shop/${category}?nameQuery=${nameQuery}`);
+                navigate(`/shop/${category}?nameQuery=${nameQuery.trim()}`);
               }}
             >
               <InputGroup w={["100%", "25rem"]}>
@@ -141,7 +141,7 @@ export default function Shop() {
                   type="text"
                   placeholder="Search"
                   value={nameQuery}
-                  onChange={(e) => setNameQuery(e.target.value.trim())}
+                  onChange={(e) => setNameQuery(e.target.value)}
                 />
               </InputGroup>
             </form>

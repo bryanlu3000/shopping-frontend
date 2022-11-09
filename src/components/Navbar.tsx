@@ -24,6 +24,8 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
 
+  const closeVerticalNavBar = () => setNavToggle(false);
+
   return (
     <>
       <nav
@@ -38,18 +40,24 @@ export default function Navbar() {
 
           <ul className={`nav-ul flex ${navToggle && "active"}`}>
             <li>
-              <Link to="/"> Event </Link>
+              <Link to="/" onClick={closeVerticalNavBar}>
+                Event
+              </Link>
             </li>
             <li>
-              <Link to="/shop/all"> Shop </Link>
+              <Link to="/shop/all" onClick={closeVerticalNavBar}>
+                Shop
+              </Link>
             </li>
             <li>
-              <Link to="/about"> About </Link>
+              <Link to="/about" onClick={closeVerticalNavBar}>
+                About
+              </Link>
             </li>
             <div className="nav-close-btn">
               <i
                 className="fas fa-times close-btn"
-                onClick={() => setNavToggle((prev) => !prev)}
+                onClick={closeVerticalNavBar}
               ></i>
             </div>
           </ul>
@@ -88,7 +96,7 @@ export default function Navbar() {
             <div className="nav-menu-btn">
               <i
                 className="fas fa-bars menu-btn"
-                onClick={() => setNavToggle((prev) => !prev)}
+                onClick={() => setNavToggle(true)}
               ></i>
             </div>
           </div>

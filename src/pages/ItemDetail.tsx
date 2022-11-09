@@ -166,6 +166,7 @@ export default function ItemDetail() {
               w="100%"
               size="sm"
               mt={[4, 6, 8, 12, 20]}
+              mb={[8, 0]}
               colorScheme="pink"
               onClick={handleAdd}
             >

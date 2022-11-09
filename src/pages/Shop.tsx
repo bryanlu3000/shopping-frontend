@@ -174,7 +174,7 @@ export default function Shop() {
             </Center>
           )}
 
-          <Center my={24}>
+          <Center mt={32}>
             <Paginator
               totalPages={totalPages}
               slicePages={4}
